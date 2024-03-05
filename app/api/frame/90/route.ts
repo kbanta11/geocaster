@@ -1,11 +1,11 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
-import { NEXT_PUBLIC_URL } from '../../../../config';
+import { NEXT_PUBLIC_URL } from '../../../config';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
-  let imgUrl = 'https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/37.86926_-122.254811/180.png'
-  let postUrl = `${NEXT_PUBLIC_URL}/api/frame/180`
+  let imgUrl = 'https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/37.86926_-122.254811/90.png'
+  let postUrl = `${NEXT_PUBLIC_URL}/api/frame/90`
 
   const body: FrameRequest = await req.json();
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
@@ -15,13 +15,13 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   }
 
   if (message?.button === 1) {
-    imgUrl = 'https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/37.86926_-122.254811/90.png'
-    postUrl = `${NEXT_PUBLIC_URL}/api/frame/90`
+    imgUrl = 'https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/37.86926_-122.254811/0.png'
+    postUrl = `${NEXT_PUBLIC_URL}/api/frame/0`
   }
 
   if (message?.button === 2) {
-    imgUrl = 'https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/37.86926_-122.254811/270.png'
-    postUrl = `${NEXT_PUBLIC_URL}/api/frame/270`
+    imgUrl = 'https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/37.86926_-122.254811/180.png'
+    postUrl = `${NEXT_PUBLIC_URL}/api/frame/180`
   }
 
   return new NextResponse(
