@@ -12,7 +12,7 @@ const frameMetadata = getFrameMetadata({
     src: `${NEXT_PUBLIC_URL}/earth.png`,
     aspectRatio: '1:1',
   },
-  postUrl: `${NEXT_PUBLIC_URL}/api/frame/start`,
+  postUrl: `${NEXT_PUBLIC_URL}/api/frame/start/route.ts`,
 });
 
 export const metadata: Metadata = {
