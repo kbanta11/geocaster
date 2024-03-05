@@ -1,6 +1,6 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
-import { NEXT_PUBLIC_URL } from '../../config';
+import { NEXT_PUBLIC_URL } from '../../../../config';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
@@ -28,26 +28,28 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: 'Story time!',
+          label: '⬅️',
+        },
+        {
+          label: '➡️',
+        },
+        {
+          label: 'Guess',
         },
         {
           action: 'link',
-          label: 'Link to Google',
-          target: 'https://www.google.com',
-        },
-        {
-          label: 'Redirect to pictures',
-          action: 'post_redirect',
+          label: 'Leaderboard',
+          target: 'geocaster.xyz'
         },
       ],
       image: {
-        src: `${NEXT_PUBLIC_URL}/park-3.png`,
+        src: `${NEXT_PUBLIC_URL}/earth.png`,
         aspectRatio: '1:1',
       },
       input: {
-        text: 'Tell me a boat story',
+        text: 'Guess the Country',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/api/frame/start`,
+      postUrl: `${NEXT_PUBLIC_URL}/api/frame/0`,
     }),
   );
 }
