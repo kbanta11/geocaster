@@ -28,7 +28,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     getFrameHtmlResponse({
       buttons: [
         {
-          label: 'Story time!',
+          label: '⬅️',
         },
         {
           action: 'link',
@@ -45,7 +45,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         aspectRatio: '1:1',
       },
       input: {
-        text: 'Tell me a boat story',
+        text: 'Guess the Country',
       },
       postUrl: `${NEXT_PUBLIC_URL}/api/frame/start`,
     }),

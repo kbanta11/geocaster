@@ -5,7 +5,7 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Start!',
+      label: 'Play!',
     },
   ],
   image: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Geocaster',
     description: 'Guess the Globe',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    images: [`${NEXT_PUBLIC_URL}/earth.png`],
   },
   other: {
     ...frameMetadata,
