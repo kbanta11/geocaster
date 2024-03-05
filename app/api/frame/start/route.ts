@@ -3,6 +3,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { NEXT_PUBLIC_URL } from '../../../config';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
+  let imgUrl = 'https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/37.86926_-122.254811/0.png'
+  let postUrl = `${NEXT_PUBLIC_URL}/api/frame/0`
   let accountAddress: string | undefined = '';
   let text: string | undefined = '';
 
@@ -11,17 +13,6 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   if (isValid) {
     accountAddress = message.interactor.verified_accounts[0];
-  }
-
-  if (message?.input) {
-    text = message.input;
-  }
-
-  if (message?.button === 3) {
-    return NextResponse.redirect(
-      'https://www.google.com/search?q=cute+dog+pictures&tbm=isch&source=lnms',
-      { status: 302 },
-    );
   }
 
   return new NextResponse(
@@ -43,13 +34,13 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         },
       ],
       image: {
-        src: `${NEXT_PUBLIC_URL}/earth.png`,
+        src: imgUrl,
         aspectRatio: '1:1',
       },
       input: {
         text: 'Guess the Country',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/api/frame/0`,
+      postUrl: postUrl,
     }),
   );
 }
