@@ -31,9 +31,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
           label: '⬅️',
         },
         {
-          action: 'link',
-          label: 'Link to Google',
-          target: 'https://www.google.com',
+          label: '➡️',
         },
         {
           label: 'Redirect to pictures',
