@@ -34,7 +34,10 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
           label: '➡️',
         },
         {
-          label: 'Redirect to pictures',
+          label: 'Guess',
+        },
+        {
+          label: 'Leaderboard',
           action: 'post_redirect',
         },
       ],
@@ -45,7 +48,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
       input: {
         text: 'Guess the Country',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/api/frame/start`,
+      postUrl: `${NEXT_PUBLIC_URL}/api/frame/0`,
     }),
   );
 }
