@@ -49,7 +49,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
       input: {
         text: 'Guess the Country',
       },
-      postUrl: `${NEXT_PUBLIC_URL}/api/frame/start`,
+      postUrl: `${NEXT_PUBLIC_URL}/api/frame/0`,
     }),
   );
 }

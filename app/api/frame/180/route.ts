@@ -39,7 +39,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         {
           action: 'link',
           label: 'Leaderboard',
-          target: 'geocaster.xyz'
+          target: 'https://geocaster.xyz'
         },
       ],
       image: {
