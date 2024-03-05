@@ -41,7 +41,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         },
       ],
       image: {
-        src: `${NEXT_PUBLIC_URL}/park-3.png`,
+        src: `${NEXT_PUBLIC_URL}/earth.png`,
         aspectRatio: '1:1',
       },
       input: {
