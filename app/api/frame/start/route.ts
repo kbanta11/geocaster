@@ -5,7 +5,7 @@ import { getCurrentGame } from '../../../helpers/getCurrentGame';
 import { getUserCanPlay } from '../../../helpers/getUserCanPlay';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
-  let imgUrl = 'https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/37.86926_-122.254811/0.png'
+  let imgUrl = `${NEXT_PUBLIC_URL}/earth.png`
   let postUrl = `${NEXT_PUBLIC_URL}/api/frame/0`
   let accountAddress: string | undefined = '';
 
