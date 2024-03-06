@@ -45,7 +45,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     )
   }
 
-  imgUrl = `https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/${currentGame?.latitude}_${currentGame?.latitude}/0.png`
+  imgUrl = `https://nmpawygvrvljzwkubune.supabase.co/storage/v1/object/public/screenshots/${currentGame?.latitude}_${currentGame?.longitude}/0.png`
 
   return new NextResponse(
     getFrameHtmlResponse({
