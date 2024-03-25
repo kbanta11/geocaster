@@ -31,7 +31,17 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>Geocaster</h1>
+      <div className='flex justify-center'>
+        <div className='flex justify-between'>
+          <h1>Geocaster</h1>
+          <a onClick={() => {
+            
+          }}>Admin</a>
+        </div>
+        <div>
+          <h2>Leaderboard</h2>
+        </div>
+      </div>
     </>
   );
 }

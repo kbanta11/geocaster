@@ -27,6 +27,12 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     postUrl = `${NEXT_PUBLIC_URL}/api/frame/90`
   }
 
+  if (message?.button === 3) {
+    // process submission
+    const isCorrect = await checkSubmissionCorrect(message?.input, currentGame);
+    const { points } = await saveSubmissionResult(accountAddress, )
+  }
+
   return new NextResponse(
     getFrameHtmlResponse({
       buttons: [
