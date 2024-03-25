@@ -2,6 +2,7 @@ import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/o
 import { NextRequest, NextResponse } from 'next/server';
 import { NEXT_PUBLIC_URL } from '../../../config';
 import { getCurrentGame } from '../../../helpers/getCurrentGame';
+import { checkSubmissionCorrect } from '../../../helpers/checkSubmissionCorrect';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   let accountAddress: string | undefined = '';
@@ -29,8 +30,9 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   if (message?.button === 3) {
     // process submission
-    const isCorrect = await checkSubmissionCorrect(message?.input, currentGame);
-    const { points } = await saveSubmissionResult(accountAddress, )
+    //const isCorrect = await checkSubmissionCorrect(message?.input, currentGame);
+    //console.log(`>> Guess Correct: ${isCorrect}`);
+    //const { points } = await saveSubmissionResult(accountAddress, isCorrect, currentGame)
   }
 
   return new NextResponse(
