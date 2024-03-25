@@ -34,9 +34,7 @@ export default function Page() {
       <div className='flex justify-center'>
         <div className='flex justify-between'>
           <h1>Geocaster</h1>
-          <a onClick={() => {
-            
-          }}>Admin</a>
+          <a>Admin</a>
         </div>
         <div>
           <h2>Leaderboard</h2>
